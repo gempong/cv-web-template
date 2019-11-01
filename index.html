@@ -6,9 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="shortcut icon" href="images/logo.png">
-
     <title>Bagus Pramajaya</title>
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -21,7 +19,7 @@
           <img src="images/logo.png" alt="">
         </a>
         <ul class="navigation-menu">
-          <li><a class="active" href="#overview" title="Overview"><i class="fas fa-home"></i> Overview</a></li>
+          <li><a href="#overview" title="Overview"><i class="fas fa-home"></i> Overview</a></li>
           <li><a href="#education" title="Education"><i class="fas fa-graduation-cap"></i> Education</a></li>
           <li><a href="#experience" title="Experience"><i class="fas fa-book-open"></i> Experience</a></li>
           <li><a href="#skill" title="Skill"><i class="fas fa-tv"></i> Skill</a></li>
@@ -39,7 +37,7 @@
           <div class="language">
             <span class="badge-red">in</span>
             <h4>Bahasa</h4>
-            <p>Advendced</p>
+            <p>Advanced</p>
             <div class="slider">
               <div class="data-slider" style="width:90%"></div>
             </div>
@@ -196,11 +194,11 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-4">
-                    <span class="card-label">Advendced</span>
+                    <span class="card-label">Advanced</span>
                     <p class="card-text">HTML 5</p>
-                    <span class="card-label">Advendced</span>
+                    <span class="card-label">Advanced</span>
                     <p class="card-text">CSS</p>
-                    <span class="card-label">Advendced</span>
+                    <span class="card-label">Advanced</span>
                     <p class="card-text">Bootstrap</p>
                   </div>
                   <div class="col-md-4">
@@ -328,6 +326,10 @@
         $('main').toggleClass("blur");
         e.preventDefault();
       });
+
+      $(".navigation-menu li a").click(function() {
+        $(this).parent().addClass('active').siblings().removeClass('active');
+      })
 
       $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
